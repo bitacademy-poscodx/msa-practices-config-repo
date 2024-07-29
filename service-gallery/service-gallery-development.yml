@@ -1,14 +1,8 @@
 # configuration: development
-
 spring:
-   config:
-      activate:
-         on-profile: development
-
    devtools:
       livereload:
          enabled: true
-                     
    datasource:
       driver-class-name: org.mariadb.jdbc.Driver
       url: jdbc:mariadb://192.168.66.4:3306/webdb?charset=utf8
@@ -18,12 +12,6 @@ spring:
          minimum-idle: 10
          maximum-pool-size: 20
 
-logging:
-   pattern:
-      console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n"
-   level:
-      root: INFO
-
 eureka:
    instance:
       preferIpAddress: true
@@ -32,3 +20,9 @@ eureka:
       registerWithEureka: true
       serviceUrl:
          defaultZone: http://localhost:8761/eureka
+
+logging:
+   pattern:
+      console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n"
+   level:
+      root: DEBUG

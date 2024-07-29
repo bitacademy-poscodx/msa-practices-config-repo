@@ -1,10 +1,5 @@
 #  configuration: production
-
 spring:
-   config:
-      activate:
-         on-profile: production
-
    datasource:
       driver-class-name: org.mariadb.jdbc.Driver
       url: jdbc:mariadb://192.168.66.4:3306/webdb?charset=utf8
@@ -13,6 +8,15 @@ spring:
       hikari:
          minimum-idle: 10
          maximum-pool-size: 20
+
+eureka:
+   instance:
+      preferIpAddress: true
+   client:
+      fetchRegistry: true
+      registerWithEureka: true
+      serviceUrl:
+         defaultZone: http://192.168.66.4:8761/eureka
 
 logging:
    pattern:
@@ -32,12 +36,3 @@ logging:
                service:
                   gallery:
                      exception: ERROR
-                              
-eureka:
-   instance:
-      preferIpAddress: true
-   client:
-      fetchRegistry: true
-      registerWithEureka: true
-      serviceUrl:
-         defaultZone: http://192,168.0.172:8761/eureka

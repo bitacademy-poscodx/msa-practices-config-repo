@@ -1,9 +1,5 @@
 # configuration: production
 spring:
-   config:
-      activate:
-         on-profile: production
-
    datasource:
       driver-class-name: org.mariadb.jdbc.Driver
       url: jdbc:mariadb://192.168.66.4:3306/webdb?characterEncoding=utf8

@@ -1,14 +1,4 @@
 # configuration: production
-spring:
-   config:
-      activate:
-         on-profile: production
-   servlet:
-      multipart:
-         enabled: true
-         max-file-size: 20MB
-         max-request-size: 100MB
-         
 logging:
    pattern:
       file: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n"
@@ -21,8 +11,8 @@ logging:
       name: logs/${spring.application.name}.log
    level:
       root: WARN
-      me:
-         kickscar:
+      com:
+         poscodx:
             msa:
                service:
                   storage:
@@ -35,10 +25,10 @@ eureka:
       fetchRegistry: true
       registerWithEureka: true
       serviceUrl:
-         defaultZone: http://192.168.0.172:8761/eureka
+         defaultZone: http://192.168.66.4:8761/eureka
 
 storage:
    location: /service-storage/assets
    httpd:
-      host: 192.168.0.172
+      host: 192.168.66.4
       port: 9999

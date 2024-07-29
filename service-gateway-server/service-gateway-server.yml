@@ -6,7 +6,7 @@ server:
 management:
    endpoint:
       gateway:
-         enabled: true    # default value
+         enabled: true
    endpoints:
       web:
          exposure:

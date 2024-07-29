@@ -1,10 +1,4 @@
 # production configuration
-
-spring:
-   config:
-      activate:
-         on-profile: production
-         
 logging:
    pattern:
       file: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n"
@@ -23,4 +17,4 @@ eureka:
       registerWithEureka: false
       fetchRegistry: true
       serviceUrl:
-         defaultZone: http://192.168.0.172:8761/eureka
+         defaultZone: http://192.168.66.4:8761/eureka            

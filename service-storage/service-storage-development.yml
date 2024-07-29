@@ -1,14 +1,5 @@
 # confioguration: development
 spring:
-   config:
-      activate:
-         on-profile: development
-
-   servlet:
-      multipart:
-         enabled: true
-         max-file-size: 20MB
-         max-request-size: 100MB
    devtools:
       livereload:
          enabled: true
@@ -17,7 +8,7 @@ logging:
    pattern:
       console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n"
    level:
-      root: INFO  
+      root: DEBUG 
                
 eureka:
    instance:
@@ -32,4 +23,6 @@ storage:
    location: /Users/kickscar/service-storage/assets
    httpd:
       host: localhost
-      port: 9999 
+      port: 9999           
+
+
